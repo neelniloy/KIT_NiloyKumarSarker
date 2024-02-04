@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userListFragment">
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.niloythings.kittask.UserListFragment"
+        android:label="User List"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_registerUserFragment"
+            app:destination="@id/registerUserFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.niloythings.kittask.UserDetailsFragment"
+        android:label="User Details"
+        tools:layout="@layout/fragment_user_details" />
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="com.niloythings.kittask.RegisterUserFragment"
+        android:label="Register User"
+        tools:layout="@layout/fragment_register_user" />
+</navigation>
